@@ -12,6 +12,9 @@
 - argparse
 - tensorboardx
 
+## Update
+June 3rd, 2022: we upload the meta-tuning phase of SUN-M. 
+
 ## Pretrained Checkpoints
 Currently we provide SUN-M (Visformer) trained on miniImageNet (5-way 1-shot and 5-way 5-shot), see [Google Drive](https://drive.google.com/drive/folders/1Ynf45BQqMz8XUMuVkDaj3JmoRM7jGFaJ?usp=sharing) for details.
 
@@ -46,4 +49,4 @@ Test accuracy may slightly vary with different pytorch/cuda versions or differen
 
 # TODO
 - more checkpoints
-- training code
+- training code of meta-training phase and SUN-D meta tuning phase
