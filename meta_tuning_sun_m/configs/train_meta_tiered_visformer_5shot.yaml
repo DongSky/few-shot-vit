@@ -1,0 +1,26 @@
+train_dataset: tiered-imagenet
+train_dataset_args: {split: train}
+tval_dataset: tiered-imagenet
+tval_dataset_args: {split: test}
+val_dataset: tiered-imagenet
+val_dataset_args: {split: val}
+
+model: meta-baseline
+model_args: 
+    encoder: visformer_micro_80
+    encoder_args: {drop_path_rate: 0.5}
+load_encoder: pretrain/visformer_tiered_pretrain.pth
+n_train_way: 10
+n_train_shot: 5
+n_train_query: 5
+n_way: 5
+n_shot: 5
+n_query: 15
+train_batches: 100
+ep_per_batch: 8
+
+max_epoch: 100
+optimizer: sgd
+optimizer_args: {lr: 0.001, weight_decay: 5.e-4, gamma: 0.5, milestones: [20, 40, 60, 80]}
+save_epoch: 1
+visualize_datasets: True
