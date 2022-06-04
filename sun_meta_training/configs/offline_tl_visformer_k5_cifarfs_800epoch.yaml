@@ -1,0 +1,38 @@
+train_dataset: cifar-fs
+train_dataset_args: {split: train, augment: cropaug}
+val_dataset: cifar-fs
+val_dataset_args: {split: val}
+fs_dataset: cifar-fs
+fs_dataset_args: {split: test}
+eval_fs_epoch: 5
+
+model: token-label
+model_args:
+    encoder: visformer_micro_80
+    encoder_args: {drop_path_rate: 0.5}
+    classifier: linear-classifier 
+    classifier_args: {n_classes: 64}
+load: sps_pretrain_cifarfs_visformer.pth #visformer_pretrain_mini_62.34.pth #nest_2xres_mini_62.38.pth
+token_label_weight: 0.75
+tl_soft_k: 5
+n_train_way: 5
+n_train_shot: 1
+n_way: 5
+n_shot: 1
+n_query: 15
+# train_batches: 400
+ep_per_batch: 16
+bg_token_num: 10
+
+batch_size: 512
+max_epoch: 800
+optimizer: adamw
+optimizer_args: {lr: 5.e-4, weight_decay: 0.05,
+                 eps: 1.e-8,
+                 sched: cosine,
+                 warmup: 5, 
+                 warmup_lr: 1.e-6, 
+}
+
+save_epoch: 5
+visualize_datasets: true
