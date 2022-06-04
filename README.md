@@ -13,7 +13,7 @@
 - tensorboardx
 
 ## Update
-June 4th, 2022: we upload the meta-tuning phase of SUN-D.
+June 4th, 2022: we upload the meta-training phase and the meta-tuning phase of SUN-D.
 
 June 4th, 2022: we upload the teacher training code in the meta-training phase of SUN.
 
