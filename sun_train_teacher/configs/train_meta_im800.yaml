@@ -1,0 +1,31 @@
+train_dataset: image-folder
+train_dataset_args: 
+    root_path: ./materials/imagenet/train
+    split_file: ./materials/imagenet-800_split.json
+    split: base
+
+val_dataset: image-folder
+val_dataset_args:
+    root_path: ./materials/imagenet/val
+    split_file: ./materials/imagenet-800_split.json
+    split: novel
+
+model: meta-baseline
+model_args: 
+    encoder: resnet18
+    encoder_args: {}
+load_encoder: ./save/classifier_image-folder_resnet18/epoch-last.pth
+
+freeze_bn: True
+
+n_way: 5
+n_shot: 1
+n_query: 15
+train_batches: 500
+ep_per_batch: 4
+
+max_epoch: 50
+optimizer: sgd
+optimizer_args: {lr: 0.001, weight_decay: 1.e-4}
+
+visualize_datasets: True
