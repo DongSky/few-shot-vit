@@ -53,4 +53,4 @@ Test accuracy may slightly vary with different pytorch/cuda versions or differen
 
 # TODO
 - more checkpoints
-- training code of meta-training phase and SUN-D meta tuning phase
+<!-- - training code of meta-training phase and SUN-D meta tuning phase -->
