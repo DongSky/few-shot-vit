@@ -1,5 +1,7 @@
-# Few-Shot ViT
+# Self-Promoted Supervision for Few-Shot Transformer
+Yet another Few-Shot ViT training framework. 
 
+Our code is mainly based on [MetaBaseline](https://github.com/yinboc/few-shot-meta-baseline), and SUN-F (means FEAT)/D (means DeepEMD) are based on the corresponding codebase. Sincerely thanks for their contribution. 
 ## Requirements
 - PyTorch (>= 1.9)
 - TorchVision
@@ -50,6 +52,17 @@ For 1-shot, you can obtain: test epoch 1: acc=67.80 +- 0.45 (%)
 For 5-shot, you can obtain: test epoch 1: acc=83.25 +- 0.28 (%)
 
 Test accuracy may slightly vary with different pytorch/cuda versions or different hardwares
+
+# Citation
+
+```bibtex
+@inproceedings{dong2022self,
+  title={Self-Promoted Supervision for Few-Shot Transformer},
+  author={Dong, Bowen and Zhou, Pan and Yan, Shuicheng and Zuo, Wangmeng},
+  booktitle={European Conference on Computer Vision (ECCV)},
+  year={2022}
+}
+```
 
 # TODO
 - more checkpoints
