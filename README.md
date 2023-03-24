@@ -2,6 +2,11 @@
 Yet another Few-Shot ViT training framework. 
 
 Our code is mainly based on [MetaBaseline](https://github.com/yinboc/few-shot-meta-baseline), and SUN-F (means FEAT)/D (means DeepEMD) are based on the corresponding codebase. Sincerely thanks for their contribution. 
+
+#### Update
+
+(March 24th 2023) We upload the template of visualizing attention masks. This code is used to generate the attention masks used in the paper.
+
 ## Requirements
 - PyTorch (>= 1.9)
 - TorchVision
